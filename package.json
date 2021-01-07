@@ -12,7 +12,8 @@
     "serve:ssr": "node dist/revision/server/main.js",
     "build:ssr": "ng build --prod && ng run revision:server:production",
     "prerender": "ng run revision:prerender",
-    "start:heroku": "node dist/server"
+    "start:heroku": "node dist/revision/server",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
